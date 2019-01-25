@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <title>Checkers</title>
+  <link rel="stylesheet" href="Checkers.css"></link>
+
+ <script>
+    function toggle (square) {
+	   console.log('toggling square', square)
+	   let redchecker = square.children[0]
+	   let blackchecker = square.children[1]
+	   let redking = square.children[2]
+	   let blackking = square.children[3]
+	   if (!redchecker.hidden && blackchecker.hidden && redking.hidden && blackking.hidden) {
+	    redchecker.hidden = true
+		blackchecker.hidden = true
+		redking.hidden = false
+		blackking = true
+	   } else if (redchecker.hidden && blackchecker.hidden && !redking.hidden && blackking.hidden) {
+	    redchecker.hidden = true
+		blackchecker.hidden = false
+		redking.hidden = true
+		blackking.hidden = true
+	   } else if (redchecker.hidden && !blackchecker.hidden && redking.hidden && blackking.hidden) {
+	    redchecker.hidden = true
+		blackchecker.hidden = true
+		redking.hidden = true
+		blackking.hidden = false
+	   } else if (redchecker.hidden && blackchecker.hidden && redking.hidden && !blackking.hidden) {
+	    redchecker.hidden = true
+		blackchecker.hidden = true
+		redking.hidden = true
+		blackking.hidden = true
+	   } else if (redchecker.hidden && blackchecker.hidden && redking.hidden && blackking.hidden) {
+	    redchecker.hidden = false
+		blackchecker.hidden = true
+		redking.hidden = true
+		blackking.hidden = true
+	   }
+	}
+ </script> 
+</head>
+
+<body>
+<div id="board" class="board">
+   <div id="square 1-1" class="square white"></div>
+   <div id="square 1-2" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker" hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 1-3" class="square white"></div>
+   <div id="square 1-4" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker" hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 1-5" class="square white"></div>
+   <div id="square 1-6" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker" hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 1-7" class="square white"></div>
+   <div id="square 1-8" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker" ></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   
+   
+   <div id="square 2-1" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	</div>
+   <div id="square 2-2" class="square white"></div>
+   <div id="square 2-3" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	</div>
+   <div id="square 2-4" class="square white"></div>
+   <div id="square 2-5" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	</div>
+   <div id="square 2-6" class="square white"></div>
+   <div id="square 2-7" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	</div>
+   <div id="square 2-8" class="square white"></div>
+   
+   
+   <div id="square 3-1" class="square white"></div>
+   <div id="square 3-2" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	</div>
+   <div id="square 3-3" class="square white"></div>
+   <div id="square 3-4" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	</div>
+   <div id="square 3-5" class="square white"></div>
+   <div id="square 3-6" class="square black" onclick="toggle (this)">
+         <div class="checker red-checker"></div>
+		 <div class="checker black-checker"hidden></div>
+		 <div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	</div>
+   <div id="square 3-7" class="square white"></div>
+   <div id="square 3-8" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	</div>
+   
+   
+   
+   
+   <div id="square 4-1" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 4-2" class="square white"></div>
+   <div id="square 4-3" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 4-4" class="square white"></div>
+   <div id="square 4-5" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 4-6" class="square white"></div>
+   <div id="square 4-7" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 4-8" class="square white"></div>
+   
+   
+   <div id="square 5-1" class="square white"></div>
+   <div id="square 5-2" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 5-3" class="square white"></div>
+   <div id="square 5-4" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 5-5" class="square white"></div>
+   <div id="square 5-6" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 5-7" class="square white"></div>
+   <div id="square 5-8" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"hidden></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   
+   
+   
+   
+   <div id="square 6-1" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 6-2" class="square white"></div>
+   <div id="square 6-3" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 6-4" class="square white"></div>
+   <div id="square 6-5" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 6-6" class="square white"></div>
+   <div id="square 6-7" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 6-8" class="square white"></div>
+   
+   
+   <div id="square 7-1" class="square white"></div>
+   <div id="square 7-2" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 7-3" class="square white"></div>
+   <div id="square 7-4" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+	 </div>
+   <div id="square 7-5" class="square white"></div>
+   <div id="square 7-6" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 7-7" class="square white"></div>
+   <div id="square 7-8" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   
+   
+   <div id="square 8-1" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 8-2" class="square white"></div>
+   <div id="square 8-3" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 8-4" class="square white"></div>
+   <div id="square 8-5" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 8-6" class="square white"></div>
+   <div id="square 8-7" class="square black" onclick="toggle (this)">
+        <div class="checker red-checker"hidden></div>
+		<div class="checker black-checker"></div>
+		<div class="checker red-king-checker"hidden></div>
+		<div class="checker black-king-checker" hidden></div>
+    </div>
+   <div id="square 8-8" class="square white"></div>
+   
+</div>
+</body>
+
+</html>
